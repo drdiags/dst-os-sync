@@ -24,4 +24,3 @@ The SuSE Linux distro is expected to be added for Shasta by 2018 Q3. It is
 expected to have the kernel source patched, so we will need to insure that
 kernel source rpms are also synchronized when the job expands. SLES 15 or
 SLES 12 SP3 are the baselines we can expect to use.
-
