@@ -70,10 +70,10 @@ pipeline {
         // Pipeline stage 'BUILD', action 'Checkout': Checkout code from source code management (Git, Bitbucket, etc)
         stage('BUILD: Checkout') {
             steps {
-                checkout scm
+                echo "checkout scm"
  
                 // Update linked submodules
-                sh "git submodule update --init --recursive ./build_common"
+                echo "sh git submodule update --init --recursive ./build_common"
             }
         }
  
