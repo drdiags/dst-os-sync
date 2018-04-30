@@ -30,7 +30,7 @@ pipeline {
  
     // Environment variables required for the build. 
     environment {
-		TARGET_ARCH=${ARCH}
+	TARGET_ARCH="${ARCH}"
         TARGET_REPO="centos"
         TARGET_REPO_VERSION="7"
         IMAGE_PREFIX = "${TARGET_REPO}-${TARGET_REPO_VERSION}"
@@ -140,15 +140,15 @@ pipeline {
  
         // Pipeline stage 'PUBLISH', action 'Transfer': Transfer the artifact(s) to the DST 
         // yum repo on iyumcf server
-        stage('PUBLISH: Transfer') {
-            steps {
-                script {
-                    // Transfer the artifact(s) using the DST-provided 'transfer' function. 
-                    // Include the path to the artifact(s) to be transferred
-                    // transfer.artifact("build/*.tar.gz")
-                }
-            }
-        }
+        //stage('PUBLISH: Transfer') {
+        //    steps {
+        //        script {
+        //            // Transfer the artifact(s) using the DST-provided 'transfer' function. 
+        //            // Include the path to the artifact(s) to be transferred
+        //            // transfer.artifact("build/*.tar.gz")
+         //       }
+          //  }
+        //}
     }
  
     // Steps to run if all of the 'stages' complete successfully (success), 
